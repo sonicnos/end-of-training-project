@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "./components/Hero";
+import Hero from "./components/Hero/Hero";
 import ImageSlider from "./components/ImageSlider";
 import Interview from "./components/Interview";
 import Section from "./components/Section";
