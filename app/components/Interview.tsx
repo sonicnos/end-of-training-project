@@ -21,7 +21,9 @@ const Interview = () => {
         </div>
       </div>
       <div className="bg-emerald-600 w-full h-1/2 flex items-center justify-center">
-        Description job
+        <div className="flex items-center justify-center border w-3/4 h-2/3">
+          Description job
+        </div>
       </div>
     </section>
   );

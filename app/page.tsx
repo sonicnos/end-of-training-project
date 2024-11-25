@@ -5,6 +5,7 @@ import Hero from "./components/Hero/Hero";
 import Interview from "./components/Interview";
 import NavBar from "./components/NavBar";
 import Section from "./components/Section";
+import Conclusion from "./components/Conclusion";
 
 export default function Home() {
   const [show, setShow] = useState(false);
@@ -25,13 +26,14 @@ export default function Home() {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, [lastScrollY]);
-
+  console.log(show);
   return (
     <div className="h-screen">
       {show && <NavBar />}
       <Hero />
       <Interview />
-      <Section bg="bg-sky-600">Section Test</Section>
+      <Conclusion />
+      {/* <Section bg="bg-sky-600">Section Test</Section> */}
     </div>
   );
 }
