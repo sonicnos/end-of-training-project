@@ -10,11 +10,11 @@ const Interview = () => {
           </div>
         </div>
         <div className="bg-sky-400 h-full w-full flex gap-x-20 items-center justify-around">
-          <div className="bg-red-500 h-1/2">
+          <div className="bg-red-500 flex flex-col gap-6 h-1/2">
             <h2>Name</h2>
             <h3>Surname</h3>
           </div>
-          <div className="bg-red-500 h-1/2">
+          <div className="bg-red-500 flex flex-col gap-6 h-1/2">
             <h3>Company</h3>
             <h3>Experience job</h3>
           </div>
