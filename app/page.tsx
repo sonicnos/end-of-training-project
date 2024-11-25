@@ -6,6 +6,7 @@ import Interview from "./components/Interview";
 import NavBar from "./components/NavBar";
 import Section from "./components/Section";
 import Conclusion from "./components/Conclusion";
+import Exposition from "./components/Exposition";
 
 export default function Home() {
   const [show, setShow] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
       {show && <NavBar />}
       <Hero />
       <Interview />
+      <Exposition />
       <Conclusion />
       {/* <Section bg="bg-sky-600">Section Test</Section> */}
     </div>
