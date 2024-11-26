@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Hero from "./components/Hero/Hero";
-import Interview from "./components/Interview";
+import Interview from "./components/Interview/Interview";
 import NavBar from "./components/NavBar";
 import Section from "./components/Section";
 import Conclusion from "./components/Conclusion";

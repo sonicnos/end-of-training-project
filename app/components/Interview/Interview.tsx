@@ -1,6 +1,26 @@
-import React from "react";
+import { projects } from "@/libs/data";
+import React, { useEffect, useRef } from "react";
+import Card from "./Card";
+import { useScroll } from "framer-motion";
+import Lenis from "@studio-freight/lenis";
 
 const Interview = () => {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
   return (
     <section className="h-full bg-slate-300 text-6xl font-bold text-black overflow-hidden">
       <div className="flex h-1/2 w-full bg-yellow-500">
@@ -24,6 +44,21 @@ const Interview = () => {
         <div className="flex items-center justify-center border w-3/4 h-2/3">
           Description job
         </div>
+      </div>
+      <div>
+        {projects.map((project, i) => {
+          const targetScale = 1 - (projects.length - i) * 0.05;
+          return (
+            <Card
+              key={`p_${i}`}
+              i={i}
+              {...project}
+              progress={scrollYProgress}
+              range={[i * 0.25, 1]}
+              targetScale={targetScale}
+            />
+          );
+        })}
       </div>
     </section>
   );
